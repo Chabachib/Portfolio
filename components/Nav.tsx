@@ -2,8 +2,9 @@ export default function Nav() {
   return (
     <nav className="nav">
       <div className="brand">
-        <span className="dot" />
-        NTC / &apos;26
+        {/* <span className="dot" /> */}
+        NTC
+        {/* / &apos;26 */}
       </div>
       <ul>
         <li><a href="#about">About</a></li>

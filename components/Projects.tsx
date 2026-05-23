@@ -6,6 +6,7 @@ type Project = {
   cat: string
   badge: string
   thumbStyle?: React.CSSProperties
+  imgSrc?: string
   title: string
   desc: string
   tags: string[]
@@ -17,54 +18,43 @@ type Project = {
 
 const projects: Project[] = [
   {
-    cat: 'ai',
-    badge: 'AI · LLM',
-    num: '01',
-    thumbStyle: {
-      background: 'radial-gradient(circle at 30% 40%, oklch(0.78 0.16 235 / 0.22), transparent 55%), repeating-linear-gradient(135deg, oklch(0.18 0.014 250) 0 12px, oklch(0.16 0.014 250) 12px 24px)',
-    },
-    title: 'Insurance Intelligence Engine',
-    desc: 'End-to-end LLM pipeline that extracts and cross-compares clauses across Medical, Motor & General insurance quotations — cutting report turnaround from 2+ days to under 30 minutes.',
-    tags: ['LLMs', 'Structured Outputs', 'Prompt Eng.', 'FastAPI'],
-    meta: '2025 · production',
-    demoHref: '#',
-    codeHref: '#',
-  },
-  {
     cat: 'ds',
     badge: 'DIGITAL TWIN',
-    num: '02',
+    num: '01',
     thumbStyle: {
       background: 'radial-gradient(circle at 70% 30%, oklch(0.72 0.18 260 / 0.20), transparent 50%), repeating-linear-gradient(45deg, oklch(0.18 0.014 250) 0 14px, oklch(0.16 0.014 250) 14px 28px)',
     },
+    imgSrc: '/assets/twinflux.jpg',
     title: 'TwinFlux — EV Energy Intelligence',
     desc: 'Physics-calibrated EV simulation (SUMO + HVAC) achieving ±0.6% Wh/km across 5 vehicle profiles. AutoML + PINN SoC prediction API with real-time MLflow tracking.',
     tags: ['PINNs', 'PyTorch', 'FastAPI', 'MLflow', 'Docker'],
     meta: '2025 · open source',
     demoHref: '#',
-    codeHref: 'https://github.com/Chabachib',
+    codeHref: 'https://github.com/Chabachib/TwinFlux.git',
   },
   {
     cat: 'research',
     badge: 'RESEARCH · PUBLISHED',
-    num: '03',
+    num: '02',
     thumbStyle: {
       background: 'repeating-linear-gradient(90deg, oklch(0.18 0.014 250) 0 1px, transparent 1px 8px), oklch(0.16 0.014 250)',
     },
+    imgSrc: '/assets/eeg.jpg',
     title: 'EEG Emotion Detection',
     desc: 'CNN & RNN (GRU, Bi-LSTM) models on the DEAP dataset reaching 91–94% accuracy in valence/arousal classification. Published in Sensors, MDPI.',
     tags: ['PyTorch', 'CNNs', 'Bi-LSTM', 'GRU', 'EEG'],
     meta: '2025 · Sensors MDPI',
     demoHref: 'https://doi.org/10.3390/s25061827',
-    codeHref: 'https://github.com/Chabachib',
+    codeHref: 'https://github.com/Chabachib/EEG-Based-Emotion-Detection.git',
   },
   {
     cat: 'ai',
     badge: 'PINN · MLOps',
-    num: '04',
+    num: '03',
     thumbStyle: {
       background: 'radial-gradient(circle at 20% 60%, oklch(0.78 0.16 235 / 0.18), transparent 50%), repeating-linear-gradient(135deg, oklch(0.18 0.014 250) 0 12px, oklch(0.16 0.014 250) 12px 24px)',
     },
+    imgSrc: '/assets/emule.jpg',
     title: 'PINN Battery SoC Estimator',
     desc: 'Physics-Informed Neural Network for EV battery State-of-Charge estimation, embedding the Coulomb Counting ODE directly into the loss function — <2% prediction error with guaranteed physical consistency.',
     tags: ['PINNs', 'PyTorch', 'ODE Loss', 'CARLA'],
@@ -75,10 +65,11 @@ const projects: Project[] = [
   {
     cat: 'ai',
     badge: 'CV · GAN',
-    num: '05',
+    num: '04',
     thumbStyle: {
       background: 'radial-gradient(circle at 20% 30%, oklch(0.78 0.16 235 / 0.18), transparent 50%), repeating-linear-gradient(135deg, oklch(0.18 0.014 250) 0 12px, oklch(0.16 0.014 250) 12px 24px)',
     },
+    imgSrc: '/assets/csgo.jpg',
     title: 'GAN-Sim — Behavioural Modelling',
     desc: 'Conditional GAN trained on 5,000+ annotated frames to generate synthetic agent trajectories for RL environment augmentation — 93% target-detection accuracy and sim-to-real transfer.',
     tags: ['GANs', 'PyTorch', 'RL', 'OpenCV'],
@@ -87,12 +78,28 @@ const projects: Project[] = [
     codeHref: 'https://github.com/Chabachib',
   },
   {
+    cat: 'ai',
+    badge: 'AUDIO · ML',
+    num: '05',
+    thumbStyle: {
+      background: 'radial-gradient(circle at 60% 40%, oklch(0.72 0.18 260 / 0.22), transparent 55%), repeating-linear-gradient(60deg, oklch(0.18 0.014 250) 0 10px, oklch(0.16 0.014 250) 10px 20px)',
+    },
+    imgSrc: '/assets/moroccan-music.jpg',
+    title: 'Moroccan Music Genre Classifier',
+    desc: 'Full-stack AI system classifying 7 Moroccan genres (Gnawa, Chaabi, Andalusian, Raï, Imazighn, Rap, Pop) from audio clips. LSTM on MFCC features, 95% test accuracy on 5,000+ clips, containerised Flask API with React frontend.',
+    tags: ['LSTM', 'MFCC', 'TensorFlow', 'Flask', 'React', 'Docker'],
+    meta: '2024 · open source',
+    demoHref: '#',
+    codeHref: 'https://github.com/Chabachib/Moroccan-Music-Classification-App',
+  },
+  {
     cat: 'research',
     badge: 'SPRINGER · AR',
     num: '06',
     thumbStyle: {
       background: 'repeating-linear-gradient(180deg, oklch(0.18 0.014 250) 0 18px, oklch(0.16 0.014 250) 18px 32px)',
     },
+    imgSrc: '/assets/ar-garden.jpg',
     title: 'AR for Innovative Learning',
     desc: 'Research on augmented-reality applications fostering student engagement and active learning in STEM environments. Published in Springer LNNS.',
     tags: ['AR', 'EdTech', 'Research'],
@@ -125,10 +132,6 @@ export default function Projects() {
               Things I&apos;ve <em>built</em>, published &amp; shipped.
             </h2>
           </div>
-          <p>
-            Production systems, published research, and personal projects — each one
-            a deeper write-up, demo or paper away.
-          </p>
         </div>
 
         <div className="filter-row reveal">
@@ -156,8 +159,10 @@ export default function Projects() {
             >
               <div className="thumb" style={p.thumbStyle}>
                 <span className="badge">{p.badge}</span>
-                <span className="ph"><span>[ THUMB {p.num} ]</span></span>
-                <span className="marker">↗</span>
+                {p.imgSrc
+                  ? <img src={p.imgSrc} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  : <span className="ph"><span>[ THUMB {p.num} ]</span></span>
+                }
               </div>
               <h3>{p.title}</h3>
               <p className="desc">{p.desc}</p>

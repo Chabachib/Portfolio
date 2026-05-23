@@ -1,38 +1,88 @@
 const skillCategories = [
   {
-    title: 'ML / AI',
+    title: 'Machine Learning & AI',
     idx: '01',
-    pills: ['PyTorch', 'TensorFlow', 'Keras', 'HuggingFace', 'PINNs', 'GANs', 'NLP', 'XAI'],
+    pills: [
+      'PyTorch',
+      'TensorFlow',
+      'Keras',
+      'Hugging Face',
+      'GANs',
+      'PINNs',
+      'AutoML',
+      'XAI',
+    ],
+  },
+  {
+    title: 'Deep Learning',
+    idx: '02',
+    pills: [
+      'CNNs',
+      'RNNs',
+      'BiLSTM',
+      'GRU',
+      'NLP',
+    ],
   },
   {
     title: 'Computer Vision',
-    idx: '02',
-    pills: ['YOLO', 'OpenCV', 'CNNs', 'RNNs', 'Bi-LSTM', 'GRU'],
-  },
-  {
-    title: 'MLOps & Data',
     idx: '03',
-    pills: ['MLflow', 'Airflow', 'FastAPI', 'Docker', 'MinIO', 'Grafana'],
+    pills: [
+      'YOLO',
+      'OpenCV',
+      'Object Detection',
+      'Image Segmentation',
+      'OCR',
+    ],
   },
   {
-    title: 'Databases',
+    title: 'MLOps & Data Engineering',
     idx: '04',
-    pills: ['PostgreSQL', 'MongoDB', 'InfluxDB', 'MySQL', 'MinIO'],
+    pills: [
+      'MLflow',
+      'Apache Airflow',
+      'FastAPI',
+      'Docker',
+      'Grafana',
+    ],
   },
   {
-    title: 'Simulation',
+    title: 'Databases & Storage',
     idx: '05',
-    pills: ['CARLA', 'SUMO', 'HVAC Modelling', 'Optuna', 'AutoML'],
+    pills: [
+      'PostgreSQL',
+      'MongoDB',
+      'InfluxDB',
+      'MySQL',
+      'MinIO',
+    ],
   },
   {
-    title: 'Languages',
+    title: 'Simulation & Optimization',
     idx: '06',
-    pills: ['Python', 'SQL'],
+    pills: [
+      'CARLA',
+      'SUMO',
+      'HVAC Modeling',
+      'Optuna',
+    ],
   },
   {
-    title: 'Cloud',
+    title: 'Programming Languages',
     idx: '07',
-    pills: ['GCP', 'Huawei Cloud', 'Oracle Cloud'],
+    pills: [
+      'Python',
+      'SQL',
+    ],
+  },
+  {
+    title: 'Cloud & Infrastructure',
+    idx: '08',
+    pills: [
+      'GCP',
+      'Huawei Cloud',
+      'Oracle Cloud',
+    ],
   },
 ]
 
@@ -47,10 +97,6 @@ export default function Skills() {
               The tools I <em>reach for</em> daily.
             </h2>
           </div>
-          <p>
-            A curated stack, not a laundry list. Tools I know well enough to know
-            what&apos;s broken about them — and exactly when to use them.
-          </p>
         </div>
 
         <div className="skills-grid reveal-stagger">
