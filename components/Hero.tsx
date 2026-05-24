@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function Hero() {
   return (
     <header className="hero">
@@ -17,7 +19,7 @@ export default function Hero() {
             <a className="btn btn-primary" href="#projects">
               View Projects <span className="arr">↗</span>
             </a>
-            <a className="btn btn-ghost" href="/CV.pdf" download="Nouh_Taha_CHEBCHOUB_CV.pdf">
+            <a className="btn btn-ghost" href="/Portfolio/CV.pdf" download="Nouh_Taha_CHEBCHOUB_CV.pdf">
               Download CV <span className="arr">↓</span>
             </a>
           </div>
@@ -26,7 +28,7 @@ export default function Hero() {
         <div className="portrait">
           <div className="glow-ring" />
           <div className="ring" />
-          <img src="/portrait.jpeg" alt="Chabachib" />
+          <Image src="/portrait.jpeg" alt="Nouh Taha CHEBCHOUB" fill style={{ objectFit: 'cover', objectPosition: 'center' }} />
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 
 type Project = {
   cat: string
@@ -160,7 +161,7 @@ export default function Projects() {
               <div className="thumb" style={p.thumbStyle}>
                 <span className="badge">{p.badge}</span>
                 {p.imgSrc
-                  ? <img src={p.imgSrc} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  ? <Image src={p.imgSrc} alt={p.title} fill style={{ objectFit: 'cover' }} />
                   : <span className="ph"><span>[ THUMB {p.num} ]</span></span>
                 }
               </div>
