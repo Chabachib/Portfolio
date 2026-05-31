@@ -13,7 +13,7 @@ export default function Hero() {
             <a className="btn btn-primary" href="#projects">
               View Projects <span className="arr">↗</span>
             </a>
-            <a className="btn btn-ghost" href="/CV.pdf" download="Nouh_Taha_CHEBCHOUB_CV.pdf">
+            <a className="btn btn-ghost" href="/docs/CV.pdf" download="Nouh_Taha_CHEBCHOUB_CV.pdf">
               Download CV <span className="arr">↓</span>
             </a>
           </div>
