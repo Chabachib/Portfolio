@@ -13,12 +13,10 @@ export default function Contact() {
         <div className="contact-side reveal">
           <span className="eyebrow">06 — Contact</span>
           <h3 style={{ marginTop: 18 }}>
-            Let&apos;s build something <em>worth shipping</em>.
+            I&apos;d love to <em>hear from you</em>.
           </h3>
           <p>
-            Open to international opportunities — full-time roles, research
-            collaborations, and selected freelance projects. Reach out in
-            whatever channel works for you.
+            Whether it&apos;s a job opportunity, a research idea, or just a question — drop me a message and I&apos;ll get back to you.
           </p>
           <div className="channels">
             {channels.map((c) => (

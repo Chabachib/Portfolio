@@ -4,35 +4,6 @@ import { useEffect } from 'react'
 
 export default function ClientEffects() {
   useEffect(() => {
-    // cursor glow
-    const cg = document.getElementById('cursorGlow') as HTMLElement | null
-    if (cg) {
-      let mx = window.innerWidth / 2
-      let my = window.innerHeight / 2
-      let cx = mx
-      let cy = my
-
-      const onMove = (e: MouseEvent) => { mx = e.clientX; my = e.clientY }
-      window.addEventListener('mousemove', onMove)
-
-      let rafId: number
-      const loop = () => {
-        cx += (mx - cx) * 0.08
-        cy += (my - cy) * 0.08
-        cg.style.left = cx + 'px'
-        cg.style.top = cy + 'px'
-        rafId = requestAnimationFrame(loop)
-      }
-      loop()
-
-      return () => {
-        window.removeEventListener('mousemove', onMove)
-        cancelAnimationFrame(rafId)
-      }
-    }
-  }, [])
-
-  useEffect(() => {
     // project card mouse-follow radial gradient
     const cards = document.querySelectorAll<HTMLElement>('.proj')
     const handlers: Array<{ el: HTMLElement; fn: (e: MouseEvent) => void }> = []

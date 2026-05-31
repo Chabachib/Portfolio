@@ -25,7 +25,7 @@ const jetBrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Nouh Taha CHEBCHOUB — AI Engineer & Data Scientist',
+  title: 'Nouh Taha CHEBCHOUB',
   description: 'Portfolio of Nouh Taha CHEBCHOUB — AI Engineer & Data Scientist specialising in physics-informed ML, LLM automation, and end-to-end MLOps. Published in Sensors (MDPI) & Springer.',
 }
 

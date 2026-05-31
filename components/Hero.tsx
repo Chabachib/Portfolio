@@ -5,21 +5,15 @@ export default function Hero() {
     <header className="hero">
       <div className="wrap hero-grid">
         <div>
-          <div className="hero-meta">
-            {/* <span className="pip" /> */}
-            {/* <span>AVAILABLE</span>
-            <span style={{ opacity: 0.4 }}>/</span> */}
-            <span>BASED IN MARRAKECH - MOROCCO</span>
-          </div>
           <h1>
-            <span className="line"><span>Nouh Taha CHEBCHOUB<em>.</em></span></span>
+            <span className="line"><span>Nouh Taha CHEBCHOUB<em></em></span></span>
           </h1>
           <span className="role">AI Engineer &nbsp;·&nbsp; Data Scientist</span>
           <div className="cta-row">
             <a className="btn btn-primary" href="#projects">
               View Projects <span className="arr">↗</span>
             </a>
-            <a className="btn btn-ghost" href="/Portfolio/CV.pdf" download="Nouh_Taha_CHEBCHOUB_CV.pdf">
+            <a className="btn btn-ghost" href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/docs/CV.pdf`} download="Nouh_Taha_CHEBCHOUB_CV.pdf">
               Download CV <span className="arr">↓</span>
             </a>
           </div>
@@ -28,7 +22,7 @@ export default function Hero() {
         <div className="portrait">
           <div className="glow-ring" />
           <div className="ring" />
-          <Image src="/portrait.jpeg" alt="Nouh Taha CHEBCHOUB" fill style={{ objectFit: 'cover', objectPosition: 'center' }} />
+          <Image src="/assets/portrait/portrait.jpeg" alt="Nouh Taha CHEBCHOUB" fill style={{ objectFit: 'cover', objectPosition: 'center' }} />
         </div>
       </div>
 

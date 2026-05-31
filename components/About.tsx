@@ -1,19 +1,19 @@
 const sections = [
   {
     title: 'Who am I?',
-    content: `AI Engineer & Data Scientist from Marrakech, Morocco, with a foundation in mathematics and computer science. Published researcher with work in Sensors (MDPI) and Springer LNNS. I love building end-to-end systems — and there's nothing quite like the satisfaction of watching them work exactly as intended.`,
+    content: `AI Engineer & Data Scientist from Marrakech, Morocco, with a foundation in mathematics and computer science. Published researcher with work in Sensors (MDPI) and Springer LNNS. I love building end-to-end systems, and there's nothing quite like the satisfaction of watching them work exactly as intended.`,
   },
   {
     title: 'What I do?',
-    content: `I build ML systems that hold up outside the notebook — physics-informed neural networks grounded in real equations, LLM pipelines that automate complex document workflows, and digital twins that process telemetry in real time. My work lives at the overlap of research rigour and production reliability: prototype fast, then harden it until it scales.`,
+    content: `I build ML systems that hold up outside the notebook, physics-informed neural networks grounded in real equations, LLM pipelines that automate complex document workflows, and digital twins that process telemetry in real time. My work lives at the overlap of research rigour and production reliability: prototype fast, then harden it until it scales.`,
   },
   {
     title: 'Vision',
-    content: `I believe the next generation of AI will be built at the intersection of physical laws and data-driven learning — not choosing between the two. My goal is to contribute to that frontier: models that are not just accurate, but interpretable, physically constrained, and trustworthy enough to deploy in high-stakes environments.`,
+    content: `I believe the next generation of AI will be built at the intersection of physical laws and data-driven learning, not choosing between the two. My goal is to contribute to that frontier: models that are not just accurate, but interpretable, physically constrained, and trustworthy enough to deploy in high-stakes environments.`,
   },
   {
     title: 'Beyond Dev',
-    content: `When I'm not building systems, I'm out running — logging miles, chasing personal bests, and collecting race medals when the opportunity shows up. I hike whenever terrain allows and travel as often as I can, drawn to new places, landscapes, and the perspective that comes with being somewhere unfamiliar.`,
+    content: `When I'm not building systems, I'm out running, logging miles and collecting race medals when the opportunity shows up. I hike whenever terrain allows and travel as often as I can, drawn to new places, landscapes, and the perspective that comes with being somewhere unfamiliar.`,
   },
 ]
 
@@ -25,7 +25,7 @@ export default function About() {
           <div>
             <span className="eyebrow">01 — About</span>
             <h2 style={{ marginTop: 18 }}>
-              Engineering at the <em>intersection</em> of physics, data &amp; intelligence.
+              Get <em>to</em> know me.
             </h2>
           </div>
         </div>
@@ -41,7 +41,7 @@ export default function About() {
 
         <div className="stat-mini reveal">
           <div>
-            <div className="n">2+</div>
+            <div className="n">1+</div>
             <div className="l">Years experience</div>
           </div>
           <div>
@@ -49,7 +49,7 @@ export default function About() {
             <div className="l">Academic Publications</div>
           </div>
           <div>
-            <div className="n">3+</div>
+            <div className="n">5+</div>
             <div className="l">Shipped systems</div>
           </div>
         </div>

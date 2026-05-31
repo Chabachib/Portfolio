@@ -1,25 +1,20 @@
 'use client'
 
-import { useState } from 'react'
 import Image from 'next/image'
 
 type Project = {
-  cat: string
   badge: string
   thumbStyle?: React.CSSProperties
   imgSrc?: string
   title: string
   desc: string
-  tags: string[]
-  meta: string
   demoHref: string
-  codeHref: string
+  codeHref?: string
   num: string
 }
 
 const projects: Project[] = [
   {
-    cat: 'ds',
     badge: 'DIGITAL TWIN',
     num: '01',
     thumbStyle: {
@@ -28,13 +23,10 @@ const projects: Project[] = [
     imgSrc: '/assets/twinflux.jpg',
     title: 'TwinFlux — EV Energy Intelligence',
     desc: 'Physics-calibrated EV simulation (SUMO + HVAC) achieving ±0.6% Wh/km across 5 vehicle profiles. AutoML + PINN SoC prediction API with real-time MLflow tracking.',
-    tags: ['PINNs', 'PyTorch', 'FastAPI', 'MLflow', 'Docker'],
-    meta: '2025 · open source',
     demoHref: '#',
-    codeHref: 'https://github.com/Chabachib/TwinFlux.git',
+    codeHref: 'https://github.com/Chabachib/Twin-Flux.git',
   },
   {
-    cat: 'research',
     badge: 'RESEARCH · PUBLISHED',
     num: '02',
     thumbStyle: {
@@ -43,13 +35,10 @@ const projects: Project[] = [
     imgSrc: '/assets/eeg.jpg',
     title: 'EEG Emotion Detection',
     desc: 'CNN & RNN (GRU, Bi-LSTM) models on the DEAP dataset reaching 91–94% accuracy in valence/arousal classification. Published in Sensors, MDPI.',
-    tags: ['PyTorch', 'CNNs', 'Bi-LSTM', 'GRU', 'EEG'],
-    meta: '2025 · Sensors MDPI',
     demoHref: 'https://doi.org/10.3390/s25061827',
     codeHref: 'https://github.com/Chabachib/EEG-Based-Emotion-Detection.git',
   },
   {
-    cat: 'ai',
     badge: 'PINN · MLOps',
     num: '03',
     thumbStyle: {
@@ -58,13 +47,9 @@ const projects: Project[] = [
     imgSrc: '/assets/emule.jpg',
     title: 'PINN Battery SoC Estimator',
     desc: 'Physics-Informed Neural Network for EV battery State-of-Charge estimation, embedding the Coulomb Counting ODE directly into the loss function — <2% prediction error with guaranteed physical consistency.',
-    tags: ['PINNs', 'PyTorch', 'ODE Loss', 'CARLA'],
-    meta: '2025 · DHBW',
     demoHref: '#',
-    codeHref: 'https://github.com/Chabachib',
   },
   {
-    cat: 'ai',
     badge: 'CV · GAN',
     num: '04',
     thumbStyle: {
@@ -73,13 +58,9 @@ const projects: Project[] = [
     imgSrc: '/assets/csgo.jpg',
     title: 'GAN-Sim — Behavioural Modelling',
     desc: 'Conditional GAN trained on 5,000+ annotated frames to generate synthetic agent trajectories for RL environment augmentation — 93% target-detection accuracy and sim-to-real transfer.',
-    tags: ['GANs', 'PyTorch', 'RL', 'OpenCV'],
-    meta: '2024 · research',
     demoHref: '#',
-    codeHref: 'https://github.com/Chabachib',
   },
   {
-    cat: 'ai',
     badge: 'AUDIO · ML',
     num: '05',
     thumbStyle: {
@@ -88,13 +69,10 @@ const projects: Project[] = [
     imgSrc: '/assets/moroccan-music.jpg',
     title: 'Moroccan Music Genre Classifier',
     desc: 'Full-stack AI system classifying 7 Moroccan genres (Gnawa, Chaabi, Andalusian, Raï, Imazighn, Rap, Pop) from audio clips. LSTM on MFCC features, 95% test accuracy on 5,000+ clips, containerised Flask API with React frontend.',
-    tags: ['LSTM', 'MFCC', 'TensorFlow', 'Flask', 'React', 'Docker'],
-    meta: '2024 · open source',
     demoHref: '#',
-    codeHref: 'https://github.com/Chabachib/Moroccan-Music-Classification-App',
+    codeHref: 'https://github.com/Chabachib/Moroccan-Music-Classification.git',
   },
   {
-    cat: 'research',
     badge: 'SPRINGER · AR',
     num: '06',
     thumbStyle: {
@@ -103,26 +81,11 @@ const projects: Project[] = [
     imgSrc: '/assets/ar-garden.jpg',
     title: 'AR for Innovative Learning',
     desc: 'Research on augmented-reality applications fostering student engagement and active learning in STEM environments. Published in Springer LNNS.',
-    tags: ['AR', 'EdTech', 'Research'],
-    meta: '2025 · Springer LNNS',
     demoHref: 'https://doi.org/10.1007/978-3-031-94623-3_37',
-    codeHref: '#',
   },
 ]
 
-const filters = [
-  { value: 'all', label: 'All' },
-  { value: 'ai', label: 'AI / ML' },
-  { value: 'ds', label: 'Data Science' },
-  { value: 'research', label: 'Research' },
-]
-
-const pad = (n: number) => String(n).padStart(2, '0')
-
 export default function Projects() {
-  const [filter, setFilter] = useState('all')
-  const visibleProjects = filter === 'all' ? projects : projects.filter((p) => p.cat === filter)
-
   return (
     <section id="projects">
       <div className="wrap">
@@ -135,28 +98,11 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="filter-row reveal">
-          {filters.map((f) => (
-            <button
-              key={f.value}
-              className={filter === f.value ? 'active' : ''}
-              onClick={() => setFilter(f.value)}
-            >
-              {f.label}
-            </button>
-          ))}
-          <span className="count">
-            {pad(visibleProjects.length)} of {pad(projects.length)}
-          </span>
-        </div>
-
         <div className="projects-grid reveal-stagger">
           {projects.map((p) => (
             <article
               key={p.num}
               className="proj"
-              data-cat={p.cat}
-              style={{ display: filter === 'all' || p.cat === filter ? undefined : 'none' }}
             >
               <div className="thumb" style={p.thumbStyle}>
                 <span className="badge">{p.badge}</span>
@@ -167,16 +113,11 @@ export default function Projects() {
               </div>
               <h3>{p.title}</h3>
               <p className="desc">{p.desc}</p>
-              <div className="tags">
-                {p.tags.map((t) => <span key={t}>{t}</span>)}
-              </div>
               <div className="meta">
-                <span>{p.meta}</span>
                 <div className="links">
-                  {p.demoHref !== '#' && <a href={p.demoHref} target="_blank" rel="noopener noreferrer">Paper →</a>}
-                  {p.demoHref === '#' && <a href={p.demoHref}>Demo →</a>}
-                  <a href={p.codeHref} target="_blank" rel="noopener noreferrer">Code →</a>
+                  {p.demoHref !== '#' && <a className="proj-paper-btn" href={p.demoHref} target="_blank" rel="noopener noreferrer">Paper</a>}
                 </div>
+                {p.codeHref && <a className="proj-code-btn" href={p.codeHref} target="_blank" rel="noopener noreferrer">Code</a>}
               </div>
             </article>
           ))}
