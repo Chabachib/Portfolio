@@ -1,6 +1,6 @@
 type Pill = { label: string; icon?: string }
 
-const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
+const BASE = ''
 
 const skillCategories = [
   {
