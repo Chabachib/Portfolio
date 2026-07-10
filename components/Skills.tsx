@@ -13,7 +13,6 @@ const skillCategories = [
       { label: 'Hugging Face', icon: '/icons/hugging_face.svg' },
       { label: 'YOLO', icon: '/icons/yolo.svg' },
       { label: 'OpenCV', icon: '/icons/opencv.svg' },
-      { label: 'OCR', icon: '/icons/ocr.svg' },
       { label: 'Claude', icon: '/icons/claude.svg' },
       { label: 'Gemini', icon: '/icons/gemini.svg' },
     ] as Pill[],
