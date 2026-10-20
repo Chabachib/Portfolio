@@ -1,46 +1,36 @@
 import type { Metadata, Viewport } from 'next'
-import { Instrument_Serif, Inter_Tight, JetBrains_Mono } from 'next/font/google'
+import { Playfair_Display, Source_Serif_4 } from 'next/font/google'
 import './globals.css'
 
-const instrumentSerif = Instrument_Serif({
-  weight: '400',
+const playfair = Playfair_Display({
+  weight: ['400'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
-  variable: '--font-serif',
+  variable: '--font-display',
   display: 'swap',
 })
 
-const interTight = Inter_Tight({
-  weight: ['300', '400', '500', '600', '700'],
+const sourceSerif = Source_Serif_4({
+  weight: ['400', '600'],
   subsets: ['latin'],
-  variable: '--font-sans',
-  display: 'swap',
-})
-
-const jetBrainsMono = JetBrains_Mono({
-  weight: ['300', '400', '500'],
-  subsets: ['latin'],
-  variable: '--font-mono',
+  variable: '--font-body',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
   title: 'Nouh Taha CHEBCHOUB',
-  description: 'Portfolio of Nouh Taha CHEBCHOUB — AI Engineer & Data Scientist specialising in physics-informed ML, LLM automation, and end-to-end MLOps. Published in Sensors (MDPI) & Springer.',
+  description: 'Portfolio of Nouh Taha CHEBCHOUB — AI Engineer & Data Scientist from Marrakech, specialising in physics-informed ML, LLM automation, and end-to-end MLOps. Published in Sensors (MDPI) & Springer.',
 }
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#131417',
+  themeColor: '#EEE5D6',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${instrumentSerif.variable} ${interTight.variable} ${jetBrainsMono.variable}`}
-    >
+    <html lang="en" className={`${playfair.variable} ${sourceSerif.variable}`}>
       <body>{children}</body>
     </html>
   )

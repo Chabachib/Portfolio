@@ -1,50 +1,26 @@
-'use client'
-
-import { useState, useEffect } from 'react'
+import { Rosette } from './Ornaments'
 
 const links = [
-  { href: '#about', label: 'About' },
-  { href: '#skills', label: 'Stack' },
-  { href: '#projects', label: 'Projects' },
+  { href: '#about', label: 'About', current: true },
+  { href: '#work', label: 'Work' },
+  { href: '#publications', label: 'Research', desktopOnly: true },
   { href: '#journey', label: 'Journey' },
   { href: '#contact', label: 'Contact' },
 ]
 
 export default function Nav() {
-  const [open, setOpen] = useState(false)
-
-  // lock body scroll while the mobile menu is open
-  useEffect(() => {
-    document.body.style.overflow = open ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
-  }, [open])
-
   return (
-    <nav className={`nav${open ? ' is-open' : ''}`}>
+    <nav className="nav" aria-label="Main">
+      <a href="#top" className="nav-logo" aria-label="Back to top">
+        <Rosette size={56} />
+      </a>
       <ul>
         {links.map((l) => (
-          <li key={l.href}><a href={l.href} onClick={() => setOpen(false)}>{l.label}</a></li>
+          <li key={l.href} className={l.desktopOnly ? 'desktop-only' : undefined}>
+            <a href={l.href} aria-current={l.current ? 'true' : undefined}>{l.label}</a>
+          </li>
         ))}
       </ul>
-      <a className="cta" href="#contact" onClick={() => setOpen(false)}>Let&apos;s talk →</a>
-
-      <button
-        className="nav-toggle"
-        aria-label={open ? 'Close menu' : 'Open menu'}
-        aria-expanded={open}
-        onClick={() => setOpen((v) => !v)}
-      >
-        <span /><span /><span />
-      </button>
-
-      <div className="nav-drawer">
-        <ul>
-          {links.map((l) => (
-            <li key={l.href}><a href={l.href} onClick={() => setOpen(false)}>{l.label}</a></li>
-          ))}
-          <li><a className="drawer-cta" href="#contact" onClick={() => setOpen(false)}>Let&apos;s talk →</a></li>
-        </ul>
-      </div>
     </nav>
   )
 }
