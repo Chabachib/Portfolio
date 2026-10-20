@@ -7,19 +7,19 @@ type TimelineItem = {
 }
 
 const experience: TimelineItem[] = [
-  { when: 'Jul 2025 — May 2026', role: 'AI Engineer', where: 'Variable Data Co. · Remote' },
-  { when: 'Feb 2025 — Jul 2025', role: 'Data Scientist Intern', where: 'DHBW Friedrichshafen · Germany' },
-  { when: 'Nov 2024 — Mar 2025', role: 'Machine Learning Engineer Intern', where: 'Cadi Ayyad University, FS Semlalia · Marrakech' },
-  { when: 'Jul 2024 — Oct 2024', role: 'Software Engineer Intern', where: 'Cadi Ayyad University, FS Semlalia · Marrakech' },
+  { when: 'Jul 2025 — Aug 2026', role: 'Data & AI Engineer', where: 'Variable Data Co. · Saudi Arabia (Remote)' },
+  { when: 'Feb 2025 — Jul 2025', role: 'Data Scientist Intern (Automotive / EV)', where: 'DHBW · Friedrichshafen, Germany' },
+  { when: 'Nov 2024 — Mar 2025', role: 'Machine Learning Engineer Intern', where: 'Cadi Ayyad University, FSSM · Marrakech' },
+  { when: 'Jul 2024 — Oct 2024', role: 'Software Engineer Intern', where: 'Cadi Ayyad University, FSSM · Marrakech' },
 ]
 
 const education: TimelineItem[] = [
-  { when: '2023 — 2025', role: 'M.Sc. Data Science', where: 'Cadi Ayyad University, FS Semlalia · Marrakech' },
-  { when: '2020 — 2023', role: 'B.Sc. Mathematics & Computer Science', where: 'Cadi Ayyad University, FS Semlalia · Marrakech' },
+  { when: '2023 — 2025', role: 'Master’s Degree in Data Science', where: 'Cadi Ayyad University, FSSM · Marrakech' },
+  { when: '2020 — 2023', role: 'Bachelor’s Degree in Mathematics and IT', where: 'Cadi Ayyad University, FSSM · Marrakech' },
 ]
 
 const publications = [
-  { title: 'EEG-Based Emotion Detection — Sensors (MDPI), 2025', doi: '10.3390/s25061827' },
+  { title: 'Enhancing EEG-based Emotion Detection with Hybrid Models — Sensors (MDPI), 2025', doi: '10.3390/s25061827' },
   { title: 'Augmented Reality for Innovative Learning — Springer LNNS', doi: '10.1007/978-3-031-94623-3_37' },
 ]
 

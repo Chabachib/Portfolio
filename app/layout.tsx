@@ -19,7 +19,7 @@ const sourceSerif = Source_Serif_4({
 
 export const metadata: Metadata = {
   title: 'Nouh Taha CHEBCHOUB',
-  description: 'Portfolio of Nouh Taha CHEBCHOUB — AI Engineer & Data Scientist from Marrakech, specialising in physics-informed ML, LLM automation, and end-to-end MLOps. Published in Sensors (MDPI) & Springer.',
+  description: 'Portfolio of Nouh Taha CHEBCHOUB — Applied AI / ML Engineer & Data Scientist from Marrakech, working across computer vision, NLP, LLMs and Document AI, from experimentation to production. Published in Sensors (MDPI) & Springer.',
 }
 
 export const viewport: Viewport = {

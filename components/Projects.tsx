@@ -12,8 +12,8 @@ type Project = {
 const projects: Project[] = [
   {
     tag: 'Digital Twin',
-    title: 'TwinFlux — EV Energy Intelligence',
-    desc: 'Physics-calibrated EV simulation (SUMO + HVAC) at ±0.6% Wh/km, with an AutoML + PINN state-of-charge API and MLflow tracking.',
+    title: 'TwinFlux — EV Energy Data & ML Platform',
+    desc: 'Multi-source vehicle data pipelines, PostgreSQL + object storage, a physics-calibrated simulator and MLflow-tracked models, with state-of-charge validated against real trips.',
     img: '/assets/twinflux.jpg',
     code: 'https://github.com/Chabachib/Twin-Flux.git',
   },
@@ -40,8 +40,8 @@ const projects: Project[] = [
   },
   {
     tag: 'CV · GAN',
-    title: 'GAN-Sim — Behavioural Modelling',
-    desc: 'Conditional GAN on 5,000+ annotated frames generating synthetic agent trajectories — 93% target-detection accuracy.',
+    title: 'GAN-Sim — GAN-Based Aim Assistance',
+    desc: 'YOLO detection combined with human-like aiming movements in CS:GO — curated and annotated the images and built the detection and generative pipeline.',
     img: '/assets/csgo.jpg',
   },
   {

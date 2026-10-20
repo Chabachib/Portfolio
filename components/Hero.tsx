@@ -27,7 +27,7 @@ export default function Hero() {
           <div className="hero-about" id="about">
             <h2 className="eyebrow red">About</h2>
             <p>
-              I&apos;m an AI Engineer &amp; Data Scientist from Marrakech, building ML systems at the
+              I&apos;m an Applied AI / ML Engineer &amp; Data Scientist from Marrakech, building ML systems at the
               intersection of physics, data and real-world impact
               <span className="desktop-only"> — published in Sensors (MDPI) and Springer LNNS</span>.
             </p>
@@ -39,7 +39,7 @@ export default function Hero() {
           </div>
 
           <ul className="hero-stats">
-            <li>1+ Years</li>
+            <li>2 Years</li>
             <li aria-hidden="true"><Star8 size={12} /></li>
             <li>2 Publications</li>
             <li aria-hidden="true"><Star8 size={12} /></li>
