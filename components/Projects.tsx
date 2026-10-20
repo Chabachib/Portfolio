@@ -56,33 +56,36 @@ const projects: Project[] = [
 export default function Projects() {
   return (
     <section className="work" id="work">
-      <div className="zellige-band" aria-hidden="true" />
+      {/* olive branch tucked under the zellige band, hanging into the section */}
       <img className="work-olive" src="/assets/moroccan/olive.webp" alt="" width={800} height={510} loading="lazy" />
+      <div className="zellige-band" aria-hidden="true" />
 
-      <div className="section-head reveal">
-        <span className="eyebrow red">02 · Selected work</span>
-        <h2 className="section-title green">Things I&apos;ve built &amp; published</h2>
-        <Divider className="accent-red" />
-      </div>
+      <div className="stage work-stage">
+        <div className="section-head reveal">
+          <span className="eyebrow red">02 · Selected work</span>
+          <h2 className="section-title green">Things I&apos;ve built &amp; published</h2>
+          <Divider className="accent-red" />
+        </div>
 
-      <div className="work-grid reveal-stagger">
-        {projects.map((p) => (
-          <article className="card" key={p.title}>
-            <div className="card-media">
-              <img src={p.img} alt={p.title} loading="lazy" />
-              <ArchOutline className="card-outline" />
-            </div>
-            <span className="eyebrow red small">{p.tag}</span>
-            <h3>{p.title}</h3>
-            <p>{p.desc}</p>
-            {(p.paper || p.code) && (
-              <div className="card-links">
-                {p.paper && <a href={p.paper} target="_blank" rel="noopener noreferrer">Read paper →</a>}
-                {p.code && <a href={p.code} target="_blank" rel="noopener noreferrer">View code →</a>}
+        <div className="work-grid reveal-stagger">
+          {projects.map((p) => (
+            <article className="card" key={p.title}>
+              <div className="card-media">
+                <img src={p.img} alt={p.title} loading="lazy" />
+                <ArchOutline className="card-outline" />
               </div>
-            )}
-          </article>
-        ))}
+              <span className="eyebrow red small">{p.tag}</span>
+              <h3>{p.title}</h3>
+              <p>{p.desc}</p>
+              {(p.paper || p.code) && (
+                <div className="card-links">
+                  {p.paper && <a href={p.paper} target="_blank" rel="noopener noreferrer">Read paper →</a>}
+                  {p.code && <a href={p.code} target="_blank" rel="noopener noreferrer">View code →</a>}
+                </div>
+              )}
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   )

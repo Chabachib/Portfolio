@@ -14,9 +14,12 @@ export default function Home() {
       <main>
         <Projects />
         <Journey />
-        <Contact />
+        {/* last screen: contact + footer share one viewport */}
+        <div className="finale">
+          <Contact />
+          <Footer />
+        </div>
       </main>
-      <Footer />
       <ClientEffects />
     </>
   )

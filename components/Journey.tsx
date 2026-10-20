@@ -45,33 +45,35 @@ export default function Journey() {
     <section className="journey" id="journey">
       <div className="zellige-band" aria-hidden="true" />
 
-      <div className="section-head reveal">
-        <span className="eyebrow gold">03 · Journey</span>
-        <h2 className="section-title cream">Where I&apos;ve worked &amp; studied</h2>
-        <Divider className="accent-gold" />
-      </div>
-
-      <div className="journey-grid reveal">
-        <div>
-          <h3 className="eyebrow gold col-title">Experience</h3>
-          <Timeline items={experience} />
+      <div className="stage journey-stage">
+        <div className="section-head reveal">
+          <span className="eyebrow gold">03 · Journey</span>
+          <h2 className="section-title cream">Where I&apos;ve worked &amp; studied</h2>
+          <Divider className="accent-gold" />
         </div>
-        <div>
-          <h3 className="eyebrow gold col-title">Education</h3>
-          <Timeline items={education} />
-          <div className="publications" id="publications">
-            <h3 className="eyebrow gold small">Publications</h3>
-            {publications.map((p) => (
-              <a key={p.doi} href={`https://doi.org/${p.doi}`} target="_blank" rel="noopener noreferrer">
-                <span className="pub-title">{p.title}</span>
-                <span className="pub-doi">doi.org/{p.doi}</span>
-              </a>
-            ))}
+
+        <div className="journey-grid reveal">
+          <div className="journey-col">
+            <h3 className="eyebrow gold col-title">Experience</h3>
+            <Timeline items={experience} />
+          </div>
+          <div className="journey-col">
+            <h3 className="eyebrow gold col-title">Education</h3>
+            <Timeline items={education} />
+            <div className="publications" id="publications">
+              <h3 className="eyebrow gold small">Publications</h3>
+              {publications.map((p) => (
+                <a key={p.doi} href={`https://doi.org/${p.doi}`} target="_blank" rel="noopener noreferrer">
+                  <span className="pub-title">{p.title}</span>
+                  <span className="pub-doi">doi.org/{p.doi}</span>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
 
-      <a className="btn btn-outline-gold reveal" href="/docs/CV.pdf" download="Nouh_Taha_CHEBCHOUB_CV.pdf">Download full CV</a>
+        <a className="btn btn-outline-gold reveal" href="/docs/CV.pdf" download="Nouh_Taha_CHEBCHOUB_CV.pdf">Download full CV</a>
+      </div>
     </section>
   )
 }

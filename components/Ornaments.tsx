@@ -44,24 +44,25 @@ export function Divider({ className }: { className?: string }) {
   )
 }
 
-// Pointed arch for project images, normalised to the element's box (360×300 in the design).
+// Tall pointed arch for project images, normalised to the element's box (196×250 in the design).
 export function ArchDefs() {
   return (
     <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">
       <defs>
         <clipPath id="arch-card" clipPathUnits="objectBoundingBox">
-          <path d="M0,1 L0,0.70993 A0.6,0.72 0 0 1 0.5,0 A0.6,0.72 0 0 1 1,0.70993 L1,1 Z" />
+          <path d="M0,1 L0,0.4638 A0.6,0.4704 0 0 1 0.5,0 A0.6,0.4704 0 0 1 1,0.4638 L1,1 Z" />
         </clipPath>
       </defs>
     </svg>
   )
 }
 
+// Inner outline of the card arch, inset 8px (180×242 at design size).
 export function ArchOutline({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 344 292" preserveAspectRatio="none" aria-hidden="true">
+    <svg className={className} viewBox="0 0 180 242" preserveAspectRatio="none" aria-hidden="true">
       <path
-        d="M0.75,292 L0.75,203.51 A206.4,206.4 0 0 1 172,0.75 A206.4,206.4 0 0 1 343.25,203.51 L343.25,292"
+        d="M0.75,242 L0.75,106.49 A108,108 0 0 1 90,0.75 A108,108 0 0 1 179.25,106.49 L179.25,242"
         fill="none"
         vectorEffect="non-scaling-stroke"
       />
