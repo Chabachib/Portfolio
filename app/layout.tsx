@@ -31,7 +31,7 @@ export const viewport: Viewport = {
 // Desktop sections are 1440×1000 artboards scaled to fit the window (CSS `zoom`).
 // --z: regular sections, --zc: the contact artboard (1440×886), which shares the screen with the footer.
 const fitScript = `(function(){
-  var FOOTER = 117;
+  var FOOTER = 79;
   function fit() {
     var w = document.documentElement.clientWidth, h = window.innerHeight;
     var s = document.documentElement.style;

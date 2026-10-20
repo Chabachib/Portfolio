@@ -99,7 +99,7 @@ a:focus-visible { outline: 2px solid var(--red); outline-offset: 4px }
 
 /* edge ornaments hug the window edges and scale with the artboard */
 .hero-corner { position: absolute; top: 0; right: 0; width: 418px; height: auto; z-index: 1; zoom: var(--z, 1) }
-.hero-zellige-right { position: absolute; top: 430px; right: 0; bottom: 0; width: 64px; z-index: 1; zoom: var(--z, 1) }
+.hero-zellige-right { position: absolute; top: 430px; right: 0; bottom: 0; width: 64px; z-index: 5; zoom: var(--z, 1) }
 .hero-zellige-left  { position: absolute; top: 560px; left: 0; bottom: 0; width: 72px; z-index: 1; zoom: var(--z, 1) }
 .hero-lantern { position: absolute; top: -40px; left: 22px; width: 100px; height: auto; z-index: 3; zoom: var(--z, 1) }
 
@@ -147,7 +147,8 @@ a:focus-visible { outline: 2px solid var(--red); outline-offset: 4px }
   width: 112%; max-width: none; height: auto;
 }
 .hero-koutoubia { position: absolute; left: 78px; bottom: -7px; width: 178px; height: auto; z-index: 3 }
-.hero-blossom { position: absolute; right: -30px; bottom: -60px; width: 460px; height: auto; z-index: 4 }
+/* stem tucked behind the right zellige strip (z 5), branch spreading over the arch */
+.hero-blossom { position: absolute; right: 18px; bottom: -36px; width: 520px; height: auto; z-index: 4; zoom: var(--z, 1) }
 
 /* ───────────────── WORK — an arcade of six arches ───────────────── */
 .work { position: relative; overflow: hidden }
@@ -233,20 +234,16 @@ a:focus-visible { outline: 2px solid var(--red); outline-offset: 4px }
 .door-outer { stroke: var(--gold); stroke-width: 1.5 }
 .door-inner { stroke: var(--green); stroke-width: 1 }
 
-/* the branches grow from the sill and climb the jambs toward the arch */
-.door-branch {
-  position: absolute; bottom: -12px; z-index: 1;
-  height: 360px; width: auto; max-width: none;
+/* olive branches enter from beyond the screen corners: one hangs from the top-right,
+   one rises from the bottom-left, each reaching toward a shoulder of the doorway */
+.contact-branch {
+  position: absolute; z-index: 1;
+  width: 520px; height: auto; max-width: none;
   filter: drop-shadow(0 4px 6px rgba(59, 42, 26, 0.18));
   pointer-events: none;
 }
-.door-branch.left  { left: -60px }
-.door-branch.right { right: -60px }
-.doorway-sill {
-  position: absolute; left: -110px; right: -110px; bottom: -16px; height: 7px; z-index: 2;
-  border-top: 1.5px solid var(--gold);
-  border-bottom: 1px solid var(--green);
-}
+.contact-branch.top-right   { left: 1048px; top: 56px; transform: rotate(155deg) }
+.contact-branch.bottom-left { left: -87px; top: 522px; transform: rotate(-15deg) }
 
 .doorway-content {
   position: relative; z-index: 3; width: 520px;
@@ -265,10 +262,11 @@ a:focus-visible { outline: 2px solid var(--red); outline-offset: 4px }
 .contact-links a:hover { color: var(--green) }
 .contact-links svg { color: var(--gold) }
 
-.footer { position: relative; padding-top: 44px; background: var(--green-deep) }
+.footer { position: relative; padding-top: 32px; background: var(--green-deep) }
+.footer .zellige-band { height: 32px; background-size: auto 32px }
 .footer-row {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px;
-  padding: 26px var(--sec-pad) 30px;
+  padding: 14px var(--sec-pad) 16px;
   font: 600 12px/1.4 var(--body); letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--cream-muted);
 }
@@ -299,7 +297,7 @@ a:focus-visible { outline: 2px solid var(--red); outline-offset: 4px }
 /* ───────────────── BELOW 1200px: fluid layout (430px mobile design) ───────────────── */
 @media (max-width: 1199px) {
   .desktop-only { display: none }
-  .stage, .hero-inner, .hero-corner, .hero-zellige-right, .hero-zellige-left, .hero-lantern, .work-olive { zoom: 1 }
+  .stage, .hero-inner, .hero-corner, .hero-zellige-right, .hero-zellige-left, .hero-lantern, .hero-blossom, .work-olive { zoom: 1 }
   .stage { width: auto; height: auto }
   .section-title, .journey .section-title { font-size: clamp(34px, 7vw, 54px) }
 
@@ -328,7 +326,7 @@ a:focus-visible { outline: 2px solid var(--red); outline-offset: 4px }
 
   .hero-arch { position: relative; right: auto; bottom: auto; width: min(76vw, 460px); margin-top: clamp(28px, 7.5vw, 56px) }
   .hero-koutoubia { left: 6vw; bottom: -2px; width: min(25.6vw, 180px) }
-  .hero-blossom { right: -12px; bottom: -12px; width: min(58vw, 420px) }
+  .hero-blossom { right: clamp(8px, 2vw, 16px); bottom: -12px; width: min(58vw, 420px) }
 
   /* work: swipe through the arches */
   .work { padding: 110px 0 56px }
@@ -362,6 +360,9 @@ a:focus-visible { outline: 2px solid var(--red); outline-offset: 4px }
   .contact-stage { padding: 90px 20px 80px }
   .doorway { width: min(700px, 100%); height: auto; min-height: 640px }
   .doorway-content { width: min(520px, 84%); padding-bottom: 80px }
+  .contact-branch { width: min(50vw, 400px) }
+  .contact-branch.top-right   { left: auto; right: -16vw; top: 2vw }
+  .contact-branch.bottom-left { left: -16vw; top: auto; bottom: 6vw }
   .doorway-content .section-title { font-size: clamp(36px, 7.4vw, 64px) }
 }
 
@@ -386,10 +387,5 @@ a:focus-visible { outline: 2px solid var(--red); outline-offset: 4px }
   .doorway-content { width: 86%; margin-top: 26vw; padding-bottom: 110px }
   .doorway-content p { font-size: 16px }
   .doorway-content .btn { padding: 14px 16px; font-size: 11px; letter-spacing: 0.06em }
-  .door-branch { height: min(48vw, 200px); bottom: -8px }
-  .door-branch.left  { left: -16px }
-  .door-branch.right { right: -16px }
-  .doorway-sill { left: -20px; right: -20px; bottom: -12px }
-  .footer-row { padding: 22px 20px 24px; font-size: 11px }
-  .footer-row span:nth-child(2) { display: none }
+  .footer-row { padding: 14px 20px 16px; font-size: 11px }
 }

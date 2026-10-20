@@ -4,12 +4,12 @@ export default function Contact() {
   return (
     <section className="contact" id="contact">
       <div className="stage contact-stage">
+        {/* olive branches reaching in from the screen corners toward the doorway's shoulders */}
+        <img className="contact-branch top-right" src="/assets/moroccan/olive.webp" alt="" width={800} height={510} loading="lazy" />
+        <img className="contact-branch bottom-left" src="/assets/moroccan/olive.webp" alt="" width={800} height={510} loading="lazy" />
+
         <div className="doorway reveal">
           <Doorway className="doorway-arch" />
-          {/* olive branches rooted at the sill, climbing the doorway's jambs */}
-          <img className="door-branch left" src="/assets/moroccan/olive-climb.webp" alt="" width={560} height={1354} loading="lazy" />
-          <img className="door-branch right" src="/assets/moroccan/olive-climb-r.webp" alt="" width={560} height={1354} loading="lazy" />
-          <div className="doorway-sill" aria-hidden="true" />
 
           <div className="doorway-content">
             <Rosette size={56} />

@@ -53,8 +53,10 @@ export default function Hero() {
         </div>
 
         <img className="hero-koutoubia" src={`${A}/koutoubia.webp`} alt="" width={400} height={583} />
-        <img className="hero-blossom" src={`${A}/blossom.webp`} alt="" width={940} height={1021} />
       </div>
+
+      {/* rooted behind the right zellige strip, growing in from the bottom-right edge */}
+      <img className="hero-blossom" src={`${A}/blossom.webp`} alt="" width={940} height={1021} />
     </header>
   )
 }
